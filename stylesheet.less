@@ -1082,10 +1082,26 @@ width: 100%;
 .widget {
     &.ecomfeaturedproducts {
         .ecom-featuredproducts-wrap {
+            .ecom-featuredproducts-header h2 {
+                text-align: center;
+                padding: 1em 0 2.5em;
+                font-family: @font-swatch3-font-family;
+                font-size: @font-swatch3-font-size;
+                font-weight: @font-swatch3-font-weight;
+                line-height: @font-swatch3-line-height;
+                color: @font-swatch3-color;
+                @media @tablet {
+                    padding: 1em 0 1.5em;
+                }
+            }
             .ecom-featuredproducts-product {
+                background-color: darken(@color-swatch2,2%);
+                margin: 1em 0;
+                padding: 2em;
                 display: inline-block;
                 width: 100%;
                 .ecom-featuredproducts-image-wrap {
+                    background-color: darken(@color-swatch2,2%);
                     width: 55%;
                     height: 250px;
                     background-position:top center;
@@ -1095,7 +1111,6 @@ width: 100%;
                     -o-background-size: contain;
                     background-size: contain;
                     overflow: hidden;
-                    background-color: @color-swatch2;
                     float: left;
                 }
                 .ecom-featuredproducts-image {
