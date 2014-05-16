@@ -990,8 +990,8 @@ width: 100%;
         width: 66.5%;
         margin: 1% 0 3.5% 3%;
         display: inline-block;
-        @media @tablet {
-            background-color: darken(@color-swatch1,5%);
+        @media only screen and (max-width: 970px) {
+            background-color: fade(@color-swatch5,10%);
             width: 97%;
             padding: 2em 1em 1em;
         }
@@ -1004,11 +1004,11 @@ width: 100%;
             width: auto;
             margin-right: 1%;
             display: inline-block;
-            @media @tablet {
+            @media only screen and (max-width: 970px) {
                 width: 29%;
                 margin-right: 3.82%;
             }
-            @media @mobile {
+            @media only screen and (max-width: 673px) {
                 width: 100%;
             }
             label[for="productlist-sort"] {
@@ -1021,7 +1021,7 @@ width: 100%;
             }
             &:first-child select {
                 width: 69%;
-                @media @tablet {
+                @media only screen and (max-width: 970px) {
                     width: 100%;
                 }
             }
@@ -1038,7 +1038,7 @@ width: 100%;
         text-align: right;
         display: inline-block;
         margin-left: 0;
-        @media @tablet {
+        @media only screen and (max-width: 970px) {
             text-align: left;
             width: 100%;
             margin-left: 3%;
@@ -1309,7 +1309,7 @@ width: 100%;
                 .checkout-quantitybtn {
                     display: inline-block;
                     margin: 10px 0 0;
-                    background-color: darken(@color-swatch2,5%);
+                    background-color: fade(@color-swatch5,10%);
                     button {
                         background-color: @color-swatch3;
                         margin: 0;
@@ -1357,7 +1357,7 @@ width: 100%;
     }
 
     .delivery {
-        background-color: lighten(@color-swatch3,50%);
+        background-color: fade(@color-swatch5,10%);
         padding: 2em;
         width: 50%;
         @media @tablet {
