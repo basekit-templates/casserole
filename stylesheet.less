@@ -19,14 +19,14 @@ body.edit { /* border for logo on editor */
     }
  }
 
-
 .canvas {
     background-color: @color-swatch2;
     border: 3px solid @color-swatch3;
     width: 90%;
     margin: 1em 5%;
-    padding: 3.5em;
+    padding: 4em 3.5em;
     margin-top: 1em;
+    clear: both;
     @media only screen and (min-width: 1140px) {
         width: 1024px; /* 1140px - 10% for margins */
         margin: 1em auto;
@@ -40,10 +40,9 @@ body.edit { /* border for logo on editor */
     .main {
         padding-top: 2em;
         border-top: 1px solid @color-swatch3;
+        clear: both;
     }
 }
-
-
 
 .bg-cover {
     -webkit-background-size: cover;
@@ -58,6 +57,7 @@ body.edit { /* border for logo on editor */
 
 .widget {
     .extendednavigation {
+        margin-top: 1em;
         float: none;
         position: relative;
         max-width: 100%;
@@ -73,15 +73,14 @@ body.edit { /* border for logo on editor */
             float: none;
             margin: 0 auto;
             text-align: center;
-            padding: 4px 0 0 0;
+            padding: 0;
             @media @tablet {
                 /* Hidden until nav icon is clicked */
                 display: none;
                 /* Then these styles are applied */
-                width: 100%;
-                border-top: 1px solid @color-swatch7;
-                margin: 0;
-                padding: 40px 0 0;
+                width: 90%;
+                margin: 0 5%;
+                padding: 55px 0 0 0;
             }
             li {
                 float: left;
@@ -90,13 +89,18 @@ body.edit { /* border for logo on editor */
                 @media @tablet {
                     width: 100%;
                     padding: 1em 0;
-                    border-bottom: 1px dotted @color-swatch7;
+                    border-bottom: 1px dotted @color-swatch3;
                     background-color: @color-swatch1;
                     background-image:image('/images/texture-background.png');
                 }
+                &:first-child {
+                    @media @tablet {
+                        border-top: 1px dotted @color-swatch3;
+                    }
+                }
                 &:last-child {
                     @media @tablet {
-                        border-bottom: 1px solid @color-swatch7;
+                        border-bottom: none;
                     }
                 }
 
@@ -106,24 +110,31 @@ body.edit { /* border for logo on editor */
                         position: absolute;
                         background-color: @color-swatch2;
                         background-image:image('/images/texture-background.png');
-                        border: 1px solid @color-swatch3;
+                        border: 2px solid @color-swatch3;
                         z-index: 500;
                         padding: 0;
                         margin: 0 0 0;
                         @media @tablet {
-                            background-color: @color-swatch1;
                             background-image:image('/images/texture-background.png');
                         }
                         li {
                             display: block;
                             width: 100%;
-                                .box-sizing {
-                                    a {
-                                        display: block;
-                                        color: @color-swatch5;
-                                        padding: 0;
-                                    }
+                            &:first-child {
+                                @media @tablet {
+                                    border-top: none;
                                 }
+                            }
+                            a {
+                                padding: 0 15px;
+                                text-decoration: none;
+                            }
+                            .box-sizing {
+                                a {
+                                    display: block;
+                                    color: @color-swatch5;
+                                }
+                            }
                         }
                     }
                 }
@@ -139,13 +150,10 @@ body.edit { /* border for logo on editor */
                     letter-spacing: @font-swatch6-letter-spacing;
                     &:hover {
                         color: @font-swatch6-color-hover;
-                        text-decoration: underline;
-                        @media @tablet {
-                            color: @color-swatch5;
-                        }
+                        text-decoration: none;
                     }
                     @media @tablet {
-                        color: @color-swatch5;
+                        padding: 0 5px;
                     }
                 }
 
@@ -185,24 +193,24 @@ body.edit { /* border for logo on editor */
                             }
                         }
                         @media @tablet {
-                                color: @color-swatch5;
+                                padding: 0 5px;
                             }
                         &:hover {
                             color: @font-swatch6-color-hover;
                             text-decoration: none;
-                            @media @tablet {
-                                color: @color-swatch5;
-                            }
                         }
                     }
                     ul {
                         padding: 0;
+                        width: 100%;
+                        margin: 0 auto;
                         @media @tablet {
                             margin-top: 14px;
-                            background-color: @color-swatch1;
+                            background-color: @color-swatch2;
                             background-image:image('/images/texture-background.png');
                         }
                         li {
+                            background-color: @color-swatch2;
                             a {
                                 .text {
                                     padding: 0;
@@ -260,7 +268,7 @@ body.edit { /* border for logo on editor */
 .bk-header {
         width: 100%;
         @media @tablet {
-            margin: 2em 0;
+            margin: 2em 0 0;
         }
     .header-img {
         display: inline-block;
@@ -287,7 +295,7 @@ body.edit { /* border for logo on editor */
         @media @tablet {
             display: block;
             width: 100%; 
-            padding: 0 0 0.8em;
+            padding: 0;
             margin: 0;
             border: none;
             box-shadow: none;
@@ -1422,6 +1430,47 @@ width: 100%;
 
 
 /* ===============================
+  ECOM - BASKET
+   =============================== */
+
+.main .widget.ecombasket { /* ZONE */    
+    .ecombasket-list-container {
+        position: relative;
+        right: 0;
+        width: 100%;
+        margin-top: 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        ul li {
+            border-bottom: 1px dotted @color-swatch3;
+            .ecombasket-item-image {
+                width: 65px;
+                height: 65px;
+                margin-right: 20px;
+            }
+            .ecombasket-item-info .ecombasket-remove-button {
+                color: @color-swatch3;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .ecombasket-checkout-wrap .ecombasket-checkout-link {
+            display: inline-block;
+            &:hover {
+                text-decoration:none;
+            }
+            @media @mobile {
+                display: block;
+            }
+        }
+    }
+}
+
+
+/* ===============================
    FOOTER 
    =============================== */
 
@@ -1443,7 +1492,7 @@ width: 100%;
     -moz-border-radius: 50px;
     border-radius: 50px;
     &:hover {
-        background-color: darken(@color-swatch5,10%);
+        border: 2px solid @color-swatch5;
     }
 }
 
