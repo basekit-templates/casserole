@@ -1,0 +1,47 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bk-pt-menu">
+
+{{widget('extendednavigation', 'navigationheader', {})|raw}}
+
+<div class="canvas">
+<header class="bk-header">
+    <div class="wrapper clearfix">
+        <div class="header-img left clearfix">
+            {{widget('image', 'headercolumn1image', { 'src': asset('images/bayleaves.png'), 'alt': 'my image', 'fileName': 'my-image.jpg', 'fileSize': '58kb', 'imageSize': '240 x 100', 'imageWidth': '240px'})|raw}}
+        </div>
+        <!--end header-img-->
+        <div class="header-name clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+            {{widget('content', 'companystrapline', {content: '<h3>Lorem Ipsum Dolor Sit Amet Lorem Ipsum</h3>', lines: 'all'})|raw}}
+            {{widget('clicktocall', 'headerclicktocall', {phoneText: '212 6574 6736'})|raw}}
+        </div>
+        <!--end header-company-name-->
+        <div class="header-img right clearfix">
+            {{widget('image', 'headercolumn3image', { 'src': asset('images/coriander.png'), 'alt': 'my image', 'fileName': 'my-image.jpg', 'fileSize': '58kb', 'imageSize': '240px x 100px', 'imageWidth': '240px'})|raw}}
+        </div>
+        <!--end header-img-->
+      </div>
+    <!--end wrapper -->
+</header>
+
+<div class="main wrapper clearfix">
+    {{zone('main')|raw}}
+</div> 
+
+<footer class="bk-footer">
+    <div class="wrapper clearfix">
+        {{widget('content', 'footercolumn1content1', {content: '<h3>Lorem Ipsum</h3>', lines: 'all'})|raw}}
+        {{widget('content', 'footercolumn1content2', {content: '<p>Lorem Ipsum Dolor Sit Amet</p>', lines: 'all'})|raw}}
+        {{widget('socialicons', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+    </div>
+</footer>
+
+</div><!-- end canvas -->
+
+</div><!-- end bk-pt-default -->
+
+{% endblock %}
