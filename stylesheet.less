@@ -1109,6 +1109,11 @@ width: 100%;
                     background-size: contain;
                     overflow: hidden;
                     float: left;
+                    @media @mobile {
+                        width: 100%;
+                        margin-bottom: 1em;
+                        background-position: center;
+                    }
                 }
                 .ecom-featuredproducts-image {
                     display: none;
@@ -1118,6 +1123,13 @@ width: 100%;
                 width: 41%;
                 display: inline-block;
                 margin-left: 4%;
+                .ecom-featuredproducts-title a {
+                    font-size: bkscale(@font-swatch2-font-size,0.8);
+                    line-height: bkscale(@font-swatch2-line-height,0.8);
+                }
+                @media @mobile {
+                    width: 100%;
+                }
             }
         }
     }
@@ -1358,12 +1370,12 @@ width: 100%;
                         margin: 0;
                         font-size: 1em;
                         @media @tablet {
-                            width: 56px;
+                            width: 44px;
                             height: 44px;
                         }
                     }
                     span {
-                        width: 56px;
+                        width: 44px;
                         display: inline-block;
                         text-align: center;
                     }
@@ -1384,6 +1396,7 @@ width: 100%;
             .image-wrap {
                 width: 65px;
                 height: 65px;
+                margin: 5px 10px 0 0;
                 background-position: center center;
                 background-repeat: no-repeat;
                 -webkit-background-size: cover;
