@@ -16,7 +16,7 @@
         <div class="header-name clearfix">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-            {{widget('content', 'companystrapline', {content: '<h3>Lorem Ipsum Dolor Sit Amet Lorem Ipsum</h3>', lines: 'all'})|raw}}
+            {{widget('content', 'companystrapline', {content: '<h3>Lorem ipsum dolor sit amet consectetur adipiscing</h3>', lines: 'all'})|raw}}
             {{widget('clicktocall', 'headerclicktocall', {phoneText: '212 6574 6736'})|raw}}
         </div>
         <!--end header-company-name-->
@@ -32,6 +32,8 @@
     {{zone('main')|raw}}
 </div> 
 
+</div><!-- end canvas -->
+
 <footer class="bk-footer">
     <div class="wrapper clearfix">
         {{widget('content', 'footercolumn1content1', {content: '<h3>Lorem Ipsum</h3>', lines: 'all'})|raw}}
@@ -39,8 +41,6 @@
         {{widget('socialicons', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
     </div>
 </footer>
-
-</div><!-- end canvas -->
 
 </div><!-- end bk-pt-default -->
 
