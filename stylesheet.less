@@ -1,23 +1,11 @@
 @import "@{templateCommon}/basekit-bootstrap.less";
 
-
 body {
   background-color: @color-swatch1;
   font-family:@font-swatch5-font-family;
   margin: 0;
   padding: 0;
 }
-
-body.edit { /* border for logo on editor */
-    .widget {
-        &.logo {
-            img {
-                border: 1px dashed red;
-                margin: 0 0 10px;
-            }
-        }
-    }
- }
 
 .canvas {
     background-color: @color-swatch2;
@@ -865,9 +853,14 @@ width: 100%;
         }
         input {
             border: 1px solid @color-swatch3;
+            background-color: @color-swatch2;
             height: 42px;
             margin: 0 5px 5px 0;
             width: 40%;
+            -webkit-appearance: none;
+            -webkit-border-radius: none;
+            -moz-border-radius: none;
+            border-radius: none;
             @media @tablet {
                 width: 100%;
             }
@@ -882,6 +875,9 @@ width: 100%;
             line-height: @font-swatch7-line-height;
             background-color: @font-swatch7-background-color;
             border: none;
+            &:hover {
+                background-color: @font-swatch7-background-color-hover;
+            }
         }
     }
 }
@@ -1522,7 +1518,8 @@ width: 100%;
   ECOM - BASKET
    =============================== */
 
-.main .widget.ecombasket { /* ZONE */    
+.main .widget.ecombasket { /* ZONE */   
+    margin: 1em 0; 
     .ecombasket-list-container {
         position: relative;
         right: 0;
@@ -1574,7 +1571,7 @@ width: 100%;
     }
 }
 
-.widget.socialicons .icons span a, .widget.profile .bk-profile-socialicons span a {
+.widget.socialicons .icons span a, .widget.profile .bk-profile-socialicons span a, .bk-footer .widget.socialicons .icons span a, .bk-footer .widget.profile .bk-profile-socialicons span a {
     background-color: @color-swatch2;
     border: 2px solid @color-swatch3;
     -webkit-border-radius: 50px;
