@@ -251,6 +251,11 @@ body {
     display: none;
 }
 
+.widget.extendednavigation .bk-overlay {
+    width:auto;
+    left:0!important;
+}
+
 
 /* ===============================
    Header
@@ -569,7 +574,7 @@ body {
                 &.menu-item-promoted {
                     padding: 1.5em;
                     border: none;
-                    background-color: lighten(@color-swatch3,50%);
+                    background-color: lighten(@color-swatch3,40%);
                     h3 {
                         width: auto;
                     }
@@ -659,7 +664,7 @@ body {
 
         .menu-subsection .menu-subsection-promoted { /* PROMOTED SUB-SECTION */ 
                 border: none;
-                background-color: lighten(@color-swatch3,50%);
+                background-color: lighten(@color-swatch3,40%);
                 padding: 0 2em 2em;
                 margin: 2em 0 1em;
                 position: relative;
@@ -696,7 +701,11 @@ body {
    =============================== */
 
    button.btn:hover {
-    background-color: @font-swatch7-background-color-hover;
+        background-color: @font-swatch7-background-color-hover;
+   }
+
+   .widget.button button {
+        margin:10px 0px;
    }
 
 /* ===============================
@@ -1580,6 +1589,10 @@ width: 100%;
     &:hover {
         border: 2px solid @color-swatch5;
     }
+}
+
+footer .widget.profile .bk-profile-socialicons span a:hover {
+    background-color: darken(@color-swatch2,15%);
 }
 
 /* SVG ICONS */
