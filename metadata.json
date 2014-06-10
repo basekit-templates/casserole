@@ -3,7 +3,7 @@
     "thumbnail":"casserole.png",
     "screenshot":"casserole.png",
     "templateType":"menu",
-    "pageTypes": ["default", "home", "menu"],
+    
     "tags": {
     "en": ["menu", "cafe", "bar", "restaurant"],
     "es": ["menú", "cafetería", "bar", "restaurante"],
