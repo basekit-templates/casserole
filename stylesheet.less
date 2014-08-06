@@ -11,9 +11,8 @@ body {
     background-color: @color-swatch2;
     border: 3px solid @color-swatch3;
     width: 90%;
-    margin: 1em 5%;
+    margin: 1em 5% 0;
     padding: 4em 3.5em;
-    margin-top: 1em;
     clear: both;
     @media only screen and (min-width: 1140px) {
         width: 1024px; /* 1140px - 10% for margins */
@@ -49,12 +48,15 @@ body {
 
 .widget {
     .extendednavigation {
-        margin-top: 1em;
+        margin-top: 2em;
         float: none;
         position: relative;
         max-width: 100%;
         min-height: 40px;
         background-color: transparent;
+        @media @tablet {
+            margin-top: 1em;
+        }
         li {
             ul {
                 display: none !important;
@@ -75,10 +77,10 @@ body {
             li {
                 float: left;
                 display: block;
-                padding: 5px 0;
+                padding: 0;
                 @media @tablet {
                     width: 100%;
-                    padding: 1em 0;
+                    padding: 0;
                     border-bottom: 1px dotted @color-swatch3;
                     background-color: @color-swatch1;
                     background-image:image('/images/texture-background.png');
@@ -93,7 +95,6 @@ body {
                         border-bottom: none;
                     }
                 }
-
                 &:hover {
                     ul {
                         display: block !important;
@@ -111,12 +112,21 @@ body {
                             display: block;
                             width: 100%;
                             &:first-child {
+                                padding-top: 5px;
                                 @media @tablet {
                                     border-top: none;
+                                    padding-top: 0;
+                                }
+                            }
+                            &:last-child {
+                                padding-bottom: 5px;
+                                @media @tablet {
+                                    border-bottom: none;
+                                    padding-bottom: 0;
                                 }
                             }
                             a {
-                                padding: 0 15px;
+                                padding: 0;
                                 text-decoration: none;
                             }
                             .box-sizing {
@@ -128,10 +138,9 @@ body {
                         }
                     }
                 }
-
                 a {
                     display: block;
-                    padding: 0 15px;
+                    padding: 5px 15px;
                     font-family: @font-swatch6-font-family;
                     font-size: @font-swatch6-font-size;
                     font-weight: @font-swatch6-font-weight;
@@ -143,10 +152,9 @@ body {
                         text-decoration: none;
                     }
                     @media @tablet {
-                        padding: 0 5px;
+                        padding: 9px 5px;
                     }
                 }
-
                 &.folder {
                     /* Folder dropdown arrow BG style goes Here */  
                     margin-right: 20px;            
@@ -175,19 +183,24 @@ body {
                             }
                         }
                         @media @tablet {
-                                padding: 0 5px;
-                            }
+                            padding: 9px 5px;
+                        }
                         &:hover {
                             color: @font-swatch6-color-hover;
                             text-decoration: none;
                         }
+                    }
+                    &:after {
+                        border-top-color: @font-swatch6-color;
+                    }
+                    &:hover:after {
+                        border-top-color: @font-swatch6-color-hover;
                     }
                     ul {
                         padding: 0;
                         width: 100%;
                         margin: 0 auto;
                         @media @tablet {
-                            margin-top: 14px;
                             background-color: @color-swatch2;
                             background-image:image('/images/texture-background.png');
                         }
@@ -195,7 +208,7 @@ body {
                             background-color: @color-swatch2;
                             a {
                                 .text {
-                                    padding: 0;
+                                    padding: 8px 5px;
                                     &:after {
                                         content: "";
                                     }
@@ -241,6 +254,18 @@ body {
 .widget.extendednavigation .bk-overlay {
     width:auto;
     left:0!important;
+}
+
+// Selected state
+
+.extendednavigation ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected {
+    a, .text {
+        color: @font-swatch6-color-hover;
+    }
+}
+
+.extendednavigation ul li.folder.selected ul li .text {
+    color: @font-swatch6-color;
 }
 
 
@@ -1561,9 +1586,6 @@ width: 100%;
     margin: 2em;
     @media @mobile {
         margin-bottom: 0;
-    }
-    .widget.content {
-
     }
 }
 
