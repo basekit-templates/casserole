@@ -787,6 +787,10 @@ ul.twitter {
     }
 }
 
+.widget.profile ul.twitter .twitter-content {
+    padding-left: 0;
+}
+
 /* ===============================
   IMAGE WIDGET
    =============================== */
@@ -831,6 +835,9 @@ ul.twitter {
     }
     .blog-post-feature-image-wrap {
         background-image: none !important;
+    }
+    h1 {
+        padding: 1em 0;
     }
     h2 {
         padding: 0.5em 0;
@@ -909,6 +916,41 @@ ul.twitter {
     }
 }
 
+/* ===============================
+   BLOG POST SHARING
+   =============================== */
+
+.blog-post-sharing {
+    margin: 2.8em 0;
+    button {
+          margin: 0 5px;
+          border: none;
+          font-family: @font-swatch7-font-family;
+          font-size: @font-swatch7-font-size;
+          font-weight:@font-swatch7-font-weight;
+          background-color: @font-swatch7-background-color;
+          color: @font-swatch7-color;
+          text-decoration: none;
+        &.btn.facebook {
+            background-color: #3b5998;
+            &:hover {
+              background-color: lighten(#3b5998,10%);
+            }
+        }
+        &.btn.twitter {
+            background-color: #4099FF;
+            &:hover {
+              background-color: lighten(#4099FF,10%);
+            }
+        }
+        &.btn.googleplus {
+            background-color: #d34836;
+            &:hover {
+              background-color: lighten(#d34836,10%);
+            }
+        }
+    }
+}
 
 /* ===============================
    SLIDESHOW WIDGET
