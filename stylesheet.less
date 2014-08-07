@@ -1133,6 +1133,7 @@ select[name="displayCount"] {
             position: inherit;
             top: 0;
             height: auto;
+            padding: 8px 14px;
         }
     }
 }
@@ -1450,16 +1451,16 @@ a.ecom-product-go-to-checkout-btn {
                 }
             }
         }
-        .ecombasket-checkout-wrap .ecombasket-checkout-link {
-            display: inline-block;
-            &:hover {
-                text-decoration:none;
-            }
-            @media @mobile {
-                display: block;
-            }
-        }
     }
+}
+
+a.btn.ecombasket-summary-link {
+  display: inline-block;
+  text-decoration: none;
+  margin: 1em 0;
+  &:hover {
+    background-color: @font-swatch7-background-color-hover;
+  }
 }
 
 /* ===============================
